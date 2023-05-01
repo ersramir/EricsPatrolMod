@@ -31,7 +31,7 @@ class Play extends Phaser.Scene {
 
         // add Rocket (p1) 
         this.p1Rocket = new Rocket(this, game.config.width/2, game.config.height - borderUISize - borderPadding, 'rocket').setOrigin(0.5, 0);
-        this.playerTurn = 0;
+        this.playerTurn = (game.settings.multiplayer) ? 0 : 2; 
         this.switchTurn = false;
 
         // add Spaceships (x3)
